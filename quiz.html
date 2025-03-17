@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Art Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/nav-menu.css">
+</head>
+<body>
+  <div id="menu-container"></div>
+
+  <div id="quiz-container" class="quiz-container">
+    <!-- Quiz cards will be inserted here dynamically -->
+  </div>
+  <div id="score-container" style="display: none;">
+    <p id="score-message"></p>
+    <canvas id="score-chart" width="400" height="400"></canvas>
+    <button id="restart-btn" class="restart-btn">Restart</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/nav-menu.js"></script>
+</body>
+</html>

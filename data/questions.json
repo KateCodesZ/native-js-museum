@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "Who painted the Mona Lisa?",
+      "image": "images/quiz/mona_lisa.jpg",
+      "answers": {
+        "Leonardo da Vinci": true,
+        "Michelangelo": false,
+        "Raphael": false,
+        "Vincent van Gogh": false
+      }
+    },
+    {
+      "question": "What is the name of the artistic movement co-founded by Pablo Picasso?",
+      "image": "images/quiz/picasso.jpg",
+      "answers": {
+        "Impressionism": false,
+        "Cubism": true,
+        "Surrealism": false,
+        "Expressionism": false
+      }
+    },
+    {
+      "question": "Which artist is known for the painting 'Starry Night?",
+      "image": "images/quiz/starry_night.jpg",
+      "answers": {
+        "Pablo Picasso": false,
+        "Vincent van Gogh": true,
+        "Claude Monet": false,
+        "Salvador Dali": false
+      }
+    },
+    {
+      "question": "Which technique did Gustav Klimt famously use to create the shimmering effect in 'The Kiss'?",
+      "image": "images/quiz/the_kiss.jpg",
+      "answers": {
+        "Oil pastels": false,
+        "Watercolor": false,
+        "Charcoal": false,
+        "Gold leaf": true
+      }
+    },
+    {
+      "question": "Which artist is famous for the 'Water Lilies' series?'?",
+      "image": "images/quiz/monet.jpg",
+      "answers": {
+        "Edgar Degas": false,
+        "Claude Monet": true,
+        "Jackson Pollock": false,
+        "Paul Cézanne": false
+      }
+    },
+    {
+      "question": "In which country was surrealist artist Salvador Dalí born?",
+      "image": "images/quiz/dali.jpg",
+      "answers": {
+        "Spain": true,
+        "France": false,
+        "Italy": false,
+        "Portugal": false
+      }
+    },
+    {
+      "question": "How many versions of 'The Scream' did Edvard Munch create?",
+      "image": "images/quiz/the_scream.jpg",
+      "answers": {
+        "Two": false,
+        "Three": false,
+        "Four": true,
+        "One": false
+      }
+    },
+    {
+      "question": "Who is known for the famous work 'The Creation of Adam' on the Sistine Chapel ceiling?",
+      "image": "images/quiz/adam.jpg",
+      "answers": {
+        "Raphael": false,
+        "Michelangelo": true,
+        "Da Vinci": false,
+        "Caravaggio": false
+      }
+    },
+    {
+      "question": "Which city is home to the famous 'La Sagrada Familia,' a basilica designed by Antoni Gaudí that is still under construction?",
+      "image": "images/quiz/sagrada_familia.jpg",
+      "answers": {
+        "Barcelona": true,
+        "Seville": false,
+        "Valencia": false,
+        "Madrid": false
+      }
+    },
+    {
+      "question": "Which artist painted 'Girl with a Pearl Earring?",
+      "image": "images/quiz/pearl_earring.jpg",
+      "answers": {
+        "Rembrandt": false,
+        "Johannes Vermeer": true,
+        "Peter Paul Rubens": false,
+        "Gustav Klimt": false
+      }
+    }
+  ]
+}
