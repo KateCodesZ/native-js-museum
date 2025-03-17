@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguste Renoir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/artist_page.css">
+    <link rel="stylesheet" href="css/nav-menu.css">
+  </head>
+  <body>
+
+    <!--Animation loading-->
+    <div class="loading-container">
+      <div class="loader">
+        <span>R</span>
+        <span>E</span>
+        <span>N</span>
+        <span>O</span>
+        <span>I</span>
+        <span>R</span>
+      </div>
+    </div>
+
+    <!--Container for navigation menu-->
+    <div id="menu-container"></div>
+
+    <div class="container">
+      <h1>Auguste Renoir</h1>
+      <div class="line"></div>
+      <h2><i>Capturing Everyday Moments</i></h2>
+      <h4>Through January 26, 2025</h4>
+      <p class="description">
+        In this exhibition, viewers can expect to see some of Renoir's iconic
+        works, including portraits, landscapes, and genre scenes. Each piece
+        reflects his passion for depicting people and places with warmth and
+        sensitivity. Renoir’s portraits, especially of women and children,
+        reveal a tender touch and an appreciation for the subtleties of human
+        expression.
+      </p>
+
+      <!-- Paintings will be loaded here -->
+      <div id="results" class="masonry-grid"></div>
+    </div>
+
+    <script src="js/renoir_page.js"></script>
+    <script src="js/nav-menu.js"></script>
+  </body>
+</html>

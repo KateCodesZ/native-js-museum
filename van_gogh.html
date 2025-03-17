@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent van Gogh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/artist_page.css">
+    <link rel="stylesheet" href="css/nav-menu.css">
+  </head>
+  <body>
+
+    <!--Animation loading-->
+    <div class="loading-container">
+      <div class="loader">
+        <span>V</span>
+        <span>A</span>
+        <span>N</span>
+        <br>
+        <span>G</span>
+        <span>O</span>
+        <span>G</span>
+        <span>H</span>
+      </div>
+    </div>
+
+    <!--Container for navigation menu-->
+    <div id="menu-container"></div>
+
+    <div class="container">
+      <h1>Vincent van Gogh</h1>
+      <div class="line"></div>
+      <h2><i>A Journey Through Emotion</i></h2>
+      <h4>Through February 9, 2025</h4>
+      <p class="description">
+        The Vincent van Gogh exhibition invites visitors to explore the vibrant world of one of the most influential post-impressionist artists. Each piece reveals not only his artistic genius but also his passion for nature and search for harmony. This exhibition offers a rare chance to experience the power and beauty of Van Gogh's art, which continues to inspire generations.
+      </p>
+
+      <!-- Paintings will be loaded here -->
+      <div id="results" class="masonry-grid"></div>
+    </div>
+
+    <script src="js/van_gogh.js"></script>
+    <script src="js/nav-menu.js"></script>
+  </body>
+</html>

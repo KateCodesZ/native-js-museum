@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Pissarro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/artist_page.css">
+    <link rel="stylesheet" href="css/nav-menu.css">
+  </head>
+  <body>
+
+    <!--Animation loading-->
+    <div class="loading-container">
+      <div class="loader">
+        <span>P</span>
+        <span>I</span>
+        <span>S</span>
+        <span>S</span>
+        <span>A</span>
+        <span>R</span>
+        <span>R</span>
+        <span>O</span>
+      </div>
+    </div>
+
+    <!--Container for navigation menu-->
+    <div id="menu-container"></div>
+
+    <div class="container">
+      <h1>Camille Pissarro</h1>
+      <div class="line"></div>
+      <h2><i>Nature and Urban Life</i></h2>
+      <h4>Through March 9, 2025</h4>
+      <p class="description">
+        Camille Pissarro was a pivotal figure in the development of Impressionism and is often referred to as the "father" of the movement due to his role as a mentor to younger artists like Paul Cézanne and Paul Gauguin. Pissarro's work is characterized by vibrant colors and a focus on the everyday lives of rural peasants, capturing scenes that reflect both their struggles and the beauty of their surroundings.
+      </p>
+
+      <!-- Paintings will be loaded here -->
+      <div id="results" class="masonry-grid"></div>
+    </div>
+
+    <script src="js/pissarro.js"></script>
+    <script src="js/nav-menu.js"></script>
+  </body>
+</html>
