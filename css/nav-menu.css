@@ -1,0 +1,155 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.menu .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 4, 29, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: clip-path 0.5s ease;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+.menu.active .nav {
+  clip-path: circle(150% at 50% 50%);
+  visibility: visible;
+}
+
+.nav-tgl {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-tgl span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  background: #293335;
+}
+
+.nav-tgl span::before,
+.nav-tgl span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  background: #293335;
+  width: 34px;
+  border-radius: 1px;
+  transition: all 200ms;
+}
+
+.nav-tgl span::before {
+  top: -10px;
+  left: 0;
+}
+
+.nav-tgl span::after {
+  top: 10px;
+  left: 0;
+}
+
+.menu.active .nav-tgl span {
+  background: transparent;
+}
+
+.menu.active .nav-tgl span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu.active .nav-tgl span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.nav:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: rgba(23, 23, 56, 1);
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+.menu.active .nav:before {
+  visibility: visible;
+  clip-path: circle(100%);
+}
+
+.nav ul {
+  display: none;
+}
+
+.menu.active .nav ul {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding-left: 0;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav ul li {
+  margin: 10px 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: rgb(237, 235, 215);
+}
+
+.nav ul li a:hover {
+  color: rgb(215, 175, 205);
+}
+
+
+@media (min-width: 1024px) {
+  .menu.active .nav:before {
+    clip-path: circle(50% at right center);
+  }
+
+  .menu.active .nav ul {
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+  }
+}
