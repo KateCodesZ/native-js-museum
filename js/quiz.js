@@ -3,6 +3,7 @@ let currentQuestion = 0;
 let score = 0;
 let userAnswers = [];
 let scoreChart;
+/* global Chart */
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load questions from the JSON file
@@ -30,6 +31,13 @@ function loadQuestion() {
   container.innerHTML = ""; // Clear previous question
 
   if (currentQuestion < currentQuestions.length) {
+    const questionData = getCurrentQuestion();
+
+    if (!questionData) {
+      console.error("Invalid question data");
+      return;
+    }
+
     const card = document.createElement("div");
     card.className = "quiz--card card";
 
@@ -44,10 +52,10 @@ function loadQuestion() {
 
     const questionElement = document.createElement("div");
     questionElement.className = "question";
-    questionElement.textContent = currentQuestions[currentQuestion].question;
+    questionElement.textContent = questionData.question;
 
     const imageElement = document.createElement("img");
-    imageElement.src = currentQuestions[currentQuestion].image;
+    imageElement.src = questionData.image;
     imageElement.alt = "Question Image";
     imageElement.style.width = "100%";
 
@@ -58,14 +66,14 @@ function loadQuestion() {
     const options = document.createElement("div");
     options.className = "options";
 
-    const answerKeys = Object.keys(currentQuestions[currentQuestion].answers);
+    const answerKeys = Object.keys(questionData.answers);
     answerKeys.forEach((key) => {
       const button = document.createElement("button");
       button.textContent = key;
 
       button.onclick = () => {
         handleButtonAnswer(
-          currentQuestions[currentQuestion].answers[key],
+          questionData.answers[key],
           key,
           card
         );
@@ -84,9 +92,23 @@ function loadQuestion() {
   saveQuizData();
 }
 
+function getCurrentQuestion() {
+  if (currentQuestion < 0 || currentQuestion >= currentQuestions.length) {
+    return null;
+  }
+  return currentQuestions[currentQuestion];
+}
+
 function handleButtonAnswer(isCorrect, selectedAnswer, card) {
+  const questionData = getCurrentQuestion();
+
+  if (!questionData) {
+    console.error("Invalid question data");
+    return;
+  }
+
   userAnswers.push({
-    question: currentQuestions[currentQuestion].question,
+    question: questionData.question,
     selectedAnswer,
     correctAnswer: getCorrectAnswer(),
     isCorrect,
@@ -117,8 +139,14 @@ function handleButtonAnswer(isCorrect, selectedAnswer, card) {
 }
 
 function getCorrectAnswer() {
-  return Object.keys(currentQuestions[currentQuestion].answers).find(
-    (key) => currentQuestions[currentQuestion].answers[key]
+  const questionData = getCurrentQuestion();
+
+  if (!questionData) {
+    return null;
+  }
+
+  return Object.keys(questionData.answers).find(
+    (key) => questionData.answers[key]
   );
 }
 
