@@ -1,11 +1,17 @@
 function loadMenu() {
   fetch("nav-menu.html")
     .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("menu-container").innerHTML = data;
+    .then((html) => {
+      const container = document.getElementById("menu-container");
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+
+      container.replaceChildren(...doc.body.children);
 
       const menu = document.querySelector(".menu");
       const btn = menu.querySelector(".nav-tgl");
+
       btn.addEventListener("click", () => {
         menu.classList.toggle("active");
       });
