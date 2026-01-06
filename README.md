@@ -1,4 +1,5 @@
 # Museum of Fine Art
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c33d6cc2f7f94be6846992c1f5bd7e27)](https://app.codacy.com/gh/KateCodesZ/native-js-museum/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 A learning project featuring a virtual museum showcasing exhibitions from three different artists, built with vanilla JavaScript.
 
